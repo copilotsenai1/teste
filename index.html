@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: gray;
+        }
+        .bg-red {
+            background-color: red;
+        }
+
+        .bg-green {
+            background-color: green;
+        }
+
+        .bg-blue {
+            background-color: blue;
+        }
+
+        /* definir o container com largura fixa e centralizado */
+        .container {
+            width: 1024px;
+            margin: 0 auto;
+        }
+
+        .bg-green p {
+            width: 49%;
+            display: inline-block;
+            text-align: center;
+        }
+
+        section {
+            clear: both;
+            padding: 15px 0;
+        }
+
+        section div {
+            width: calc(25% - 10px);
+            display: inline-block;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .container {
+                width: 100%;
+            }
+            
+            .bg-green p {
+                width: 100%;
+                display: block;
+            }
+
+            section div {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background: lightgray;
+            }
+
+            section div {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="bg-red">
+            <h1>Welcome to My Website</h1>
+        </header>
+
+        <main>
+            <div class="bg-green">
+                <p><img src="https://placehold.co/600x400" alt="Placeholder Image"></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum nesciunt est molestiae ducimus, excepturi praesentium distinctio quia animi deserunt quod nisi doloremque inventore similique? Eligendi, quod! Iusto, assumenda numquam?</p>
+            </div>
+
+            <div class="bg-green">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum nesciunt est molestiae ducimus, excepturi praesentium distinctio quia animi deserunt quod nisi doloremque inventore similique? Eligendi, quod! Iusto, assumenda numquam?</p>
+                <p><img src="https://placehold.co/600x400" alt="Placeholder Image"></p>
+            </div>
+
+            <section>
+                <div>ITEM 1</div>
+                <div>ITEM 2</div>
+                <div>ITEM 3</div>
+                <div>ITEM 4</div>
+            </section>
+        </main>
+
+        <footer class="bg-blue">
+            <p>&copy; 2024 My Website</p>
+        </footer>
+    </div>
+</body>
+</html>
