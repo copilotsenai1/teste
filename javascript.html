@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="numero1">numero1:</label>
+    <input type="text" id="numero1" name="numero1"><br><br>
+
+    <label for="numero2">numero2:</label>
+    <input type="text" id="numero2" name="numero2"><br><br>
+
+    <button type="submit" value="Submit">calcular</button>
+
+    <div id="nome"></div>
+    <div id="resultado"></div>
+
+    <script>
+        // number 
+        // string 
+        // boolean
+        // array = ['miguel', 'ana', 'luisa', 'carlos', 'renato'], 
+        // array = [1994, 1900, 2020, 2024]
+        // object
+
+        // operadores: + - * / %
+
+        const boton = document.querySelector("button");
+        boton.addEventListener("click", calcular);
+
+        let nombre = "juan";
+        function calcular() {
+            document.getElementById("nome").innerText = "o nome é: " + nombre;
+
+            const num1 = parseFloat(document.getElementById("numero1").value);
+            const num2 = parseFloat(document.getElementById("numero2").value);
+            
+            if (num1 < 0 || num2 < 0) {
+                alert("por favor insira numeros positivos");
+                return;
+            }
+            
+            const resultado = num1 + num2;
+            // const resultado = num1 - num2;
+            // const resultado = num1 * num2;
+            // const resultado = num1 / num2;
+            // const resultado = num1 % num2;
+            document.getElementById("resultado").innerText = "o resultado é: " + resultado;
+
+            if (resultado > 10) {
+                nombre = "pedro";
+            }
+            else {
+                nombre = "maria";
+            }
+
+            document.getElementById("nome").innerText = "o nome é: " + nombre;
+
+        }
+    </script>
+</body>
+</html>
